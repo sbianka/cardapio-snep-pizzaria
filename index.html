@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Snep Pizzaria | Cardápios</title>
 
 <style>
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     min-height: 100vh;
     background: #111;
     color: white;
     font-family: Arial, sans-serif;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     padding: 25px;
 }
 
@@ -36,12 +45,17 @@ p {
 
 a {
     display: block;
+
     background: white;
     color: #111;
+
     text-decoration: none;
+
     padding: 18px;
     margin: 15px 0;
+
     border-radius: 14px;
+
     font-size: 18px;
     font-weight: bold;
 }
@@ -49,7 +63,9 @@ a {
 a:active {
     transform: scale(0.98);
 }
+
 </style>
+
 </head>
 
 <body>
@@ -60,19 +76,20 @@ a:active {
 
 <p>Escolha o seu cardápio</p>
 
-<a href="./cardapio-promocional.pdf">
+<a href="./visualizar.html">
     Cardápio Promocional 🍕
 </a>
 
-<a href="./cardapio-doce.pdf">
+<a href="./visualizar.html?cardapio=doce">
     Cardápio de pizzas doce 🍫
 </a>
 
-<a href="./cardapio-premium.pdf">
+<a href="./visualizar.html?cardapio=premium">
     Cardápio de pizzas Premium 👑
 </a>
 
 </div>
 
 </body>
+
 </html>
