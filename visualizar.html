@@ -1,37 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Snep Pizzaria | Cardápio</title>
 
 <style>
+
 * {
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
+
     margin: 0;
     padding: 0;
+
     width: 100%;
     height: 100%;
+
     background: #111;
 }
 
 iframe {
+
     width: 100%;
     height: 100%;
+
     border: none;
+
 }
+
 </style>
+
 </head>
 
 <body>
 
-<iframe
-    src="https://raw.githubusercontent.com/sbianka/cardapio-snep-pizzaria/main/Carda%CC%81pio%20Snep%20Pizzaria.pdf">
-</iframe>
+<iframe id="cardapio"></iframe>
+
+<script>
+
+const params = new URLSearchParams(
+    window.location.search
+);
+
+const tipo = params.get("cardapio");
+
+const cardapios = {
+
+    promocional:
+    "Carda%CC%81pio%20Snep%20Pizzaria.pdf",
+
+    doce:
+    "Carda%CC%81pio%20Doce%20Snep%20Pizzaria.pdf",
+
+    premium:
+    "Carda%CC%81pio%20Premium%20Snep%20Pizzaria%20.pdf"
+
+};
+
+const arquivo =
+    cardapios[tipo] ||
+    cardapios.promocional;
+
+document.getElementById("cardapio").src =
+    "https://raw.githubusercontent.com/" +
+    "sbianka/cardapio-snep-pizzaria/main/" +
+    arquivo;
+
+</script>
 
 </body>
+
 </html>
